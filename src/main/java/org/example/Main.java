@@ -3,8 +3,6 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int testValue = scanner.nextInt();
-        System.out.println(myMath.changeSign(testValue));
+        System.out.println(myMath.sqrt(49, 0)); // Возвращает квадратный корень числа
     }
 }
