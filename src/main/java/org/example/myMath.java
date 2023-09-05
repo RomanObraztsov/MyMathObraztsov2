@@ -34,21 +34,40 @@ public class myMath {
         return ctg;
     }
 
+    public static double arcctg(int ctg) {
+        double arcctg = (1 / ctg);
+        return arcctg;
+    }
+
 
     public static double circleLength(int diam) { // Возвращает длину окружности
         double length = diam * PI;
         return length;
     }
-}
 
-  /*  public static int primeNumbers(int firstPoint, int secondPoint) { // Должно возвращать простое число, но не работает
-        for (int i = firstPoint; i <= secondPoint; i++) {
-            for (int p = firstPoint; p < secondPoint; p++) {
-                if (i % p == 0) {
-                    int output = i;
+
+    /* public static void primeNumbers(int firstPoint, int secondPoint) { // Должно возвращать простое число, но не работает
+        for (int number = firstPoint; number <= secondPoint; number++){
+            for (int P = 1; P <= number; P++) {
+                for (int i = 1; i < P; i++){
+                    if (P % i == 0){
+                        System.out.println(P + " ");
+                    }
                 }
             }
         }
+    } */
+
+    public static double sqrt(double x, double eps) {
+        double guess = x;
+        double error = guess * guess - x;
+        while (error > eps) {
+            guess = (guess + x / guess) / 2.0;
+            error = guess * guess - x;
+        }
+        return guess;
     }
-} */
+}
+
+
 
